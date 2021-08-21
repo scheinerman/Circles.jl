@@ -1,0 +1,4 @@
+name = "Circles"
+uuid = "ff960780-c778-420f-b7e5-e0ddf67fff46"
+authors = ["Ed Scheinerman <ers@jhu.edu>"]
+version = "0.1.0"
