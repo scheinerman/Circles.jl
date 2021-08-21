@@ -1,6 +1,4 @@
 # Circles
-A  package for dealing with circles
-
 
 ## Constructors
 
@@ -17,6 +15,11 @@ A  package for dealing with circles
 * `three_points(C)` returns a list of three points that lie on the circle (as complex numbers).
 
 
+## Mobius Transformation
+
+Given a linear fractional transformation `F`, then `F(C)` is the result of applying that transformation to the points on `C`. See `LinearFractionalTransformations`.
+
+
 ## Visualization
 
 `draw(C)` draws `C` (using methods from `SimpleDrawing`). For example:
@@ -25,3 +28,9 @@ julia> newdraw(); draw(C; linecolor=:red); finish()
 ```
 draws `C` as a red circle.
 
+
+
+
+## To Do
+
+Implement intersection of circles `∩` to give a set of 0, 1, or 2 points.  

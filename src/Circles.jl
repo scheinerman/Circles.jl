@@ -77,4 +77,14 @@ Draw the circle `C`.
 draw(C::Circle; args...) = draw_circle(center(C), radius(C); args...)
 
 
+# applying LFT to a Circle
+
+function (F::LFT)(C::Circle)
+    pp = three_points(C)
+    qq = F.(pp)
+    return Circle(qq...)
+end
+
+
+
 end # module
