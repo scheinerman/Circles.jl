@@ -38,11 +38,17 @@ The function `touch_points(z1,z2,z3)` returns the points of tangency of those th
 
 ## Visualization
 
-`draw(C)` draws `C` (using methods from `SimpleDrawing`). For example:
+`draw(C, fill::Bool=false; args)` draws `C` (using methods from `SimpleDrawing`). For example:
 ```julia
 julia> newdraw(); draw(C; linecolor=:red); finish()
 ```
 draws `C` as a red circle.
+
+If `fill` is set to `true`, then the interior is colored in. For example:
+```julia
+draw(C, true, color=:yellow, linecolor=:red, fillalpha=0.3)
+```
+draws `C` as a somewhat transparent disc with a yellow interior and red boundary.
 
 
 ## Roundoff Errors
