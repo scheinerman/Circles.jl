@@ -332,6 +332,11 @@ version = "2.36.0+0"
 deps = ["Libdl"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
+[[LinearFractionalTransformations]]
+git-tree-sha1 = "031534c8b50cd9f0225c1d92f7bf276d0662ca73"
+uuid = "8bac944d-a3a1-5789-a62e-204935847c3c"
+version = "0.1.1"
+
 [[Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
@@ -479,9 +484,9 @@ uuid = "01d81517-befc-4cb6-b9ec-a95719d0359c"
 version = "0.3.4"
 
 [[Reexport]]
-git-tree-sha1 = "5f6c21241f0f655da3952fd60aa18477cf96c220"
+git-tree-sha1 = "adcd36e8ba9665c88eb0bd156d4e2a19f9b0d889"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
-version = "1.1.0"
+version = "1.2.0"
 
 [[Requires]]
 deps = ["UUIDs"]
