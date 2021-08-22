@@ -30,6 +30,9 @@ function Circle(a::Complex, b::Complex, c::Complex)
     return Circle(z, r)
 end
 
+# copy constructor
+Circle(C::Circle) = Circle(C.x, C.y, C.r)
+
 # standard stuff
 
 export radius, area, circumference, center
@@ -85,6 +88,6 @@ function (F::LFT)(C::Circle)
     return Circle(qq...)
 end
 
-
+include("operations.jl")
 
 end # module
