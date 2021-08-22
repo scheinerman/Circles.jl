@@ -30,7 +30,7 @@ Given a linear fractional transformation `F`, then `F(C)` is the result of apply
 
 ### Triples of mutually tangent circles
 
-Given three points (as complex numbers) the function `three_circles(z1,z2,z3)` returns a list of 
+Given three points (as complex numbers) the function `kiss(z1,z2,z3)` returns a list of 
 three circles that are pairwise tangent and centered at those points.
 
 The function `touch_points(z1,z2,z3)` returns the points of tangency of those three circles. 

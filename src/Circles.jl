@@ -74,6 +74,9 @@ export three_points
 
 import SimpleDrawing: draw
 
+const _FILL_COLOR = :lightgray
+const _LINE_COLOR = :black
+
 """
     draw(C::Circle, fill::Bool=false; args...)
 Draw the circle `C`. With `fill=true`, fill in the interior in color.
@@ -83,16 +86,11 @@ Example:
 """
 function draw(C::Circle, fill::Bool = false; args...)
     if fill
-        draw_disc(center(C), radius(C); args...)
+        draw_disc(center(C), radius(C); linecolor=_LINE_COLOR, color=_FILL_COLOR, args...)
     else
-        draw_circle(center(C), radius(C); args...)
+        draw_circle(center(C), radius(C); linecolor=_LINE_COLOR, args...)
     end
 end
-
-
-# draw(C::Circle; args...) = draw_circle(center(C), radius(C); args...)
-
-
 
 # applying LFT to a Circle
 
@@ -103,6 +101,6 @@ function (F::LFT)(C::Circle)
 end
 
 include("operations.jl")
-include("three_circles.jl")
+include("kiss.jl")
 
 end # module
