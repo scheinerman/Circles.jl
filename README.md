@@ -27,6 +27,15 @@ Given a linear fractional transformation `F`, then `F(C)` is the result of apply
 * **Membership**: Given a complex number `z` and a circle `C`, `in(z,C)` (or `z ∈ C`) tests of the point `z` is inside (or on the boundary of) `C`.
 * **Subset**: Given circles `C` and `D`, then `issubset(C,D)` (or `C ⊆ D`) returns `true` if `C` is contained inside `D`.
 
+
+### Triples of mutually tangent circles
+
+Given three points (as complex numbers) the function `three_circles(z1,z2,z3)` returns a list of 
+three circles that are pairwise tangent and centered at those points.
+
+The function `touch_points(z1,z2,z3)` returns the points of tangency of those three circles. 
+
+
 ## Visualization
 
 `draw(C)` draws `C` (using methods from `SimpleDrawing`). For example:

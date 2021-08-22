@@ -72,12 +72,26 @@ function three_points(C::Circle)
 end
 export three_points
 
-import SimpleDrawing: draw 
+import SimpleDrawing: draw
+
 """
-    draw(C::Circle)
-Draw the circle `C`.
+    draw(C::Circle, fill::Bool=false; args...)
+Draw the circle `C`. With `fill=true`, fill in the interior in color.
+
+Example:
+`draw(C,true,color=:yellow, linecolor=:red, fillalpha=0.3)`
 """
-draw(C::Circle; args...) = draw_circle(center(C), radius(C); args...)
+function draw(C::Circle, fill::Bool = false; args...)
+    if fill
+        draw_disc(center(C), radius(C); args...)
+    else
+        draw_circle(center(C), radius(C); args...)
+    end
+end
+
+
+# draw(C::Circle; args...) = draw_circle(center(C), radius(C); args...)
+
 
 
 # applying LFT to a Circle
@@ -89,5 +103,6 @@ function (F::LFT)(C::Circle)
 end
 
 include("operations.jl")
+include("three_circles.jl")
 
 end # module
