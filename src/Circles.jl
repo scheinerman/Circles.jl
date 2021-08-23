@@ -102,5 +102,6 @@ end
 
 include("operations.jl")
 include("kiss.jl")
+include("inversion.jl")
 
 end # module
