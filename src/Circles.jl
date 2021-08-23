@@ -88,9 +88,15 @@ Example:
 """
 function draw(C::Circle, fill::Bool = false; args...)
     if fill
-        draw_disc(center(C), radius(C); linecolor=_LINE_COLOR, color=_FILL_COLOR, args...)
+        draw_disc(
+            center(C),
+            radius(C);
+            linecolor = _LINE_COLOR,
+            color = _FILL_COLOR,
+            args...,
+        )
     else
-        draw_circle(center(C), radius(C); linecolor=_LINE_COLOR, args...)
+        draw_circle(center(C), radius(C); linecolor = _LINE_COLOR, args...)
     end
 end
 

@@ -95,7 +95,7 @@ end
 export soddy
 
 function soddy(C1::Circle, C2::Circle, C3::Circle)
-    r = soddy_radii(C1,C2,C3)[1]
-    z = soddy_center(C1,C2,C3)
-    return Circle(z,r)
+    r = soddy_radii(C1, C2, C3)[1]
+    z = soddy_center(C1, C2, C3)
+    return Circle(z, r)
 end
