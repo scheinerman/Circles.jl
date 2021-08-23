@@ -12,6 +12,7 @@ If `D` passes through the center of `C` an error will occur.
 function inv(C::Circle, z::Number)::Complex{Float64}
     c = center(C)
     d = abs(c - z)    # distance from center to the point
+    r = radius(C)
 
     if d == 0
         return Inf + Inf * im
@@ -19,7 +20,8 @@ function inv(C::Circle, z::Number)::Complex{Float64}
 
     u = (z - c) / d   # unit vector from center to the point
 
-    return c + u / d
+
+    return c + (r^2 / d) * u
 end
 
 

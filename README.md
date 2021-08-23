@@ -20,6 +20,17 @@
 
 Given a linear fractional transformation `F`, then `F(C)` is the result of applying that transformation to the points on `C`. See `LinearFractionalTransformations`.
 
+### Inversion
+
+For a circle `C` and a point `z`, the function `inv(C,z)` returns the point that inverts `z` through `C` as described
+[in this article](https://en.wikipedia.org/wiki/Inversive_geometry). If `z` is at the center of `C`, then `Inf + Inf*im` is returned.
+
+For two circles `C` and `D`, the function `inv(C,D)` returns the inversion of `D` through `C`. 
+If `D` passes through the center of `C` an error is thrown.
+
+Note that in both cases the first argument, `C`, is the circle through which the inversion takes place. 
+
+
 ### Set Operations
 
 
