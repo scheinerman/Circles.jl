@@ -55,6 +55,8 @@ Return the circumference of the circle.
 """
 circumference(C::Circle) = 2 * π * C.r
 
+
+import Plots: center
 """
     center(C)
 Return the center of the circle as a complex number. 
