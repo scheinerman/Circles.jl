@@ -1,5 +1,7 @@
 module Circles
 
-"This module is replaced by Clines"
+message = "This module is replaced by Clines"
+
+@info message
 
 end # module
